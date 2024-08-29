@@ -1,0 +1,276 @@
+/* Box sizing */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Remove default margins and paddings */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+figure,
+pre {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default spacing for paragraphs */
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Remove default spacing for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Remove default spacing for lists */
+ul,
+ol,
+dl {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Remove default styling for form elements */
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Remove default styling for anchor tags */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove default styling for images */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove default styling for tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom style */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 100%;
+  padding-top: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.item-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+/* header part */
+
+header {
+  padding: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(226, 226, 226); 
+  z-index: 1000; 
+  box-shadow: 0 4px 6px rgba(33, 33, 33, 0.4); 
+}
+
+.logo {
+  width: 6rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logo:hover {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+nav ul li {
+  margin-right: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(52, 51, 51);
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  color: rgb(91, 89, 89);
+}
+
+/* nomatchfound */
+
+.error {
+  padding: 2rem;
+  font-size: 3rem;
+}
+
+/* Active Class */
+
+.active {
+  color: brown;
+}
+
+/* Banner component */
+
+.banner {
+  width: 100%;
+  background-color: cadetblue;
+  color: aliceblue;
+  padding: 1rem;
+  text-align: center;
+}
+
+.banner h3 {
+  font-size: 5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+
+.banner p {
+  width: 80%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(79, 78, 78, 0.5);
+  margin: 2rem auto;
+}
+
+/* section style  */
+
+section {
+  width: 85%;
+  margin: 3rem auto;
+}
+
+/* Feednav */
+
+.feednav {
+  padding: 1rem;
+}
+
+.feednav h2 {
+  display: inline;
+  color: cadetblue;
+  border-bottom: 3px solid cadetblue;
+  padding: 0.6rem;
+}
+
+.feednav hr {
+  margin-top: 0.6rem;
+}
+
+/* post style */
+
+.post {
+  padding: 1rem;
+}
+
+.post img {
+  margin-right: 1.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+}
+
+.post div div span {
+  color: cadetblue;
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.post div div small {
+  font-size: 1rem;
+  color: rgb(119, 117, 117);
+}
+
+.likes {
+  border: 2px solid rgb(2, 189, 2);
+  padding: 0.7rem;
+  border-radius: 3px;
+}
+
+#no-of-likes {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  color: rgb(2, 189, 2);
+}
+
+.post-content {
+  margin-top: 2rem;
+}
+
+.post-content h2 {
+  margin-bottom: 0.6rem;
+}
+
+.post-content p {
+  font-size: 1.2rem;
+  color: rgb(119, 117, 117);
+}
+
+.post-content button {
+  color: rgb(2, 189, 2);
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.post hr {
+  margin-top: 1.5rem;
+}
