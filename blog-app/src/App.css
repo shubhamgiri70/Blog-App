@@ -291,6 +291,7 @@ section {
   font-size: 1.6rem;
   margin-bottom: 1rem;
   justify-content: center;
+  cursor: pointer;
 }
 
 #next {
@@ -298,13 +299,20 @@ section {
   justify-content: center;
   font-size: 1.6rem;
   margin-top: 1rem;
+  cursor: pointer;
 }
 
-.pagination ul li {
-  border: 1px solid rgb(2, 189, 2);
-  color: rgb(2, 189, 2);
-  padding: 0.7rem;
-  cursor: pointer;
+.pagination ul {
+  li {
+    border: 1px solid rgb(2, 189, 2);
+    color: rgb(2, 189, 2);
+    padding: 0.7rem;
+    cursor: pointer;
+  }
+  .active-page {
+    background-color: rgb(2, 189, 2);
+    color: aliceblue;
+  }
 }
 
 /* Sidebar style */
@@ -326,6 +334,12 @@ section {
   color: aliceblue;
   padding: 0.4rem;
   border-radius: 16px;
+  cursor: pointer;
+}
+
+.tags ul li:hover {
+  background-color: aliceblue;
+  color: rgb(151, 148, 148);
 }
 
 /* Login style */
