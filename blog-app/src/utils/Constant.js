@@ -1,4 +1,4 @@
-const ROOT_URL = "https://conduit.productionready.io/api/";
+const ROOT_URL = "https://api.realworld.io/api/";
 
 const articlesURL = ROOT_URL + "articles";
 
