@@ -357,6 +357,7 @@ section {
 .user-details p {
   color: rgb(2, 189, 2);
   margin-top: 0.6rem;
+  cursor: pointer;
 }
 
 input {
@@ -367,14 +368,32 @@ input {
   margin-top: 1rem;
 }
 
+.user-details .errors {
+  width: 100%;
+  text-align: center;
+  color: red;
+}
+
 .user-details form {
   align-items: flex-end;
 }
 
-.user-details form button {
+.btn-enabled {
   padding: 0.6rem;
   background-color: rgb(2, 189, 2);
   width: 10rem;
   border-radius: 4px;
   color: aliceblue;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.btn-disabled {
+  padding: 0.6rem;
+  width: 10rem;
+  border-radius: 4px;
+  background-color: #ccc;
+  color: #666;
+  margin-top: 1rem;
+  cursor: not-allowed;
 }
