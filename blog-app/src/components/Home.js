@@ -30,6 +30,12 @@ class Home extends React.Component {
       });
   }
 
+  componentDidUpdate(_prevProps, prevState) {
+    if (prevState.activePageIndex !== this.state.activePageIndex) {
+      this.fetchData();
+    }
+  }
+
   fetchData = () => {
     const limit = this.state.articlesPerPage;
     const offset = (this.state.articlesPerPage - 1) * limit;
