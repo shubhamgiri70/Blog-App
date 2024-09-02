@@ -13,6 +13,17 @@ class Home extends React.Component {
     articlesCount: 0,
     articlesPerPage: 10,
     activePageIndex: 1,
+    activeTab: "",
+  };
+
+  removeTab = () => {
+    this.setState({ activeTab: "" });
+  };
+
+  addTab = (value) => {
+    this.setState({
+      activeTab: value,
+    });
   };
 
   componentDidMount() {
@@ -31,7 +42,10 @@ class Home extends React.Component {
   }
 
   componentDidUpdate(_prevProps, prevState) {
-    if (prevState.activePageIndex !== this.state.activePageIndex) {
+    if (
+      prevState.activePageIndex !== this.state.activePageIndex ||
+      prevState.activeTab !== this.state.activePageIndex
+    ) {
       this.fetchData();
     }
   }
@@ -39,8 +53,11 @@ class Home extends React.Component {
   fetchData = () => {
     const limit = this.state.articlesPerPage;
     const offset = (this.state.articlesPerPage - 1) * limit;
+    const tag = this.state.activeTab;
 
-    fetch(articlesURL + `/?offset=${offset}&limit=${limit}`)
+    fetch(
+      articlesURL + `/?offset=${offset}&limit=${limit}` + (tag && `&tag=${tag}`)
+    )
       .then((res) => res.json())
       .then((data) => {
         this.setState({
@@ -59,14 +76,20 @@ class Home extends React.Component {
   };
 
   render() {
-    const { articles, error, articlesCount, articlesPerPage, activePageIndex } =
-      this.state;
+    const {
+      articles,
+      error,
+      articlesCount,
+      articlesPerPage,
+      activePageIndex,
+      activeTab,
+    } = this.state;
     return (
       <>
         <Banner />
         <div className="container flex">
           <section>
-            <FeedNav />
+            <FeedNav activeTab={activeTab} removeTab={this.removeTab} />
             <Posts articles={articles} error={error} />
             <Pagination
               articlesCount={articlesCount}
@@ -75,7 +98,7 @@ class Home extends React.Component {
               updateCurrentPageIndex={this.updateCurrentPageIndex}
             />
           </section>
-          <Sidebar />
+          <Sidebar addTab={this.addTab} />
         </div>
       </>
     );

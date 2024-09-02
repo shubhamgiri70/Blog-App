@@ -11,7 +11,9 @@ function Posts(props) {
   if (!articles) {
     return <Loader />;
   }
-
+  if (articles.length < 1) {
+    return <h2>No article found!</h2>;
+  }
   return (
     <div>
       {articles.map((article) => (
