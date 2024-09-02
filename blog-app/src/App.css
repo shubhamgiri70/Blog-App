@@ -397,3 +397,74 @@ input {
   margin-top: 1rem;
   cursor: not-allowed;
 }
+
+/* Singlepost style */
+
+.single-post {
+  width: 100%;
+}
+
+.post-banner {
+  width: 100%;
+  padding: 1rem;
+  background-color: rgb(52, 51, 51);
+}
+
+.post-banner h4 {
+  font-size: 4rem;
+  color: aliceblue;
+  padding: 1rem;
+}
+
+.post-banner div {
+  padding: 1rem;
+}
+
+.post-banner div img {
+  border-radius: 50%;
+}
+
+.post-banner div span {
+  color: aliceblue;
+}
+
+.post-banner div small {
+  color: rgb(178, 180, 181);
+}
+
+.post-details {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.post-details div h5 {
+  padding: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.post-details div div {
+  padding: 1rem;
+}
+
+#post-tag {
+  border: 1px solid rgb(114, 113, 113);
+  color: rgb(114, 113, 113);
+  padding: 0.4rem;
+  border-radius: 16px;
+}
+
+#hr-post {
+  margin-top: 3rem;
+}
+
+.post-details h6 {
+  font-size: 1.3rem;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.post-details small {
+  color: rgb(2, 189, 2);
+}

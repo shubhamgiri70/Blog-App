@@ -1,9 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function Post(props) {
-  const { author, createdAt, favoritesCount, title, description } = props;
+  const { author, createdAt, favoritesCount, title, description, slug } = props;
 
   if (!author) {
     return <div>Error: Author data is missing.</div>;
@@ -36,11 +37,14 @@ function Post(props) {
           <small id="no-of-likes">{favoritesCount}</small>
         </div>
       </div>
-      <div className="post-content">
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <button>Read More</button>
-      </div>
+      <Link to={`/article/${slug}`}>
+        <div className="post-content">
+          <h2>{title}</h2>
+          <p>{description}</p>
+          <button>Read More</button>
+        </div>
+      </Link>
+
       <hr />
     </article>
   );
