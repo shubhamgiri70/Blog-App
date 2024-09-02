@@ -212,13 +212,12 @@ section {
 
 .feednav h2 {
   display: inline;
-  color: cadetblue;
-  border-bottom: 3px solid cadetblue;
+  color: rgb(84, 82, 82);
   padding: 0.6rem;
 }
 
-.feednav hr {
-  margin-top: 0.6rem;
+.feednav h2.feednav-active {
+  color: cadetblue;
 }
 
 /* post style */

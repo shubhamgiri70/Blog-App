@@ -34,7 +34,14 @@ class Sidebar extends React.Component {
         <div className="tags">
           <ul className="flex wrap">
             {tags.map((tag) => (
-              <li key={tag}>{tag}</li>
+              <li
+                key={tag}
+                onClick={() => {
+                  this.props.addTab(tag);
+                }}
+              >
+                {tag}
+              </li>
             ))}
           </ul>
         </div>
