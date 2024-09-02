@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import NoMatch from "./components/NoMatch";
-import SinglePostWrapper from "./components/SinglePost";
+import SinglePost from "./components/SinglePost";
 
 class App extends React.Component {
   render() {
@@ -16,7 +16,7 @@ class App extends React.Component {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/article/:slug" element={<SinglePostWrapper />} />
+          <Route path="/article/:slug" element={<SinglePost />} />
           <Route path="*" element={<NoMatch />} />
         </Routes>
       </>
